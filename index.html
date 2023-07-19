@@ -256,9 +256,26 @@
 
         <div class="section-title">
           <h2>Please leave a feedback!</h2>
-
-          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScu7aqixHiP4O37J_cMAgNCXgz1ZfTbnjGgoF6rJ54_cbCXAg/viewform?embedded=true" width="640" height="1579" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-        
+          <div>
+            <style>
+              .target-element {
+                width: 640px;
+                height: 1579px;
+              }
+            </style>
+            <script>
+              function changeStyle() {
+                var element = document.getElementById('gogform');
+                var h = element.style.height;
+                if (h != '1579px') {
+                  element.style.height = '500px';
+                } else {
+                  element.style.height = '1579px';
+                }
+              }
+            </script>
+          <iframe id="gogform" class="target-element" onLoad="changeStyle()" src="https://docs.google.com/forms/d/e/1FAIpQLScu7aqixHiP4O37J_cMAgNCXgz1ZfTbnjGgoF6rJ54_cbCXAg/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+          </div>
         </div>
       </div>
     </section><!-- End About Section -->
